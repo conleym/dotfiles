@@ -1,0 +1,8 @@
+\set AUTOCOMMIT OFF
+\set HISTCONTROL ignoredups
+\timing on
+\pset null '[NULL]'
+\set HISTFILE ~/.psql/.psql_history- :HOST - :PORT - :DBNAME
+\set HISTSIZE 200000
+\set PROMPT1 '%n@%M/%~%R%# '
+\set ON_ERROR_ROLLBACK interactive

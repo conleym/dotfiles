@@ -1,0 +1,63 @@
+####################
+# emacs:
+####################
+# backup, etc. files
+*~
+\#*\#
+\.\#*
+# byte compiled elisp
+*.elc
+# TeX preview stuff
+auto/*.el
+# Other things
+.dir-locals.el
+
+
+####################
+# floobits:
+####################
+.floo
+.flooignore
+
+####################
+# OS X stuff:
+####################
+.DS_Store
+.localized
+.Trashes
+.Spotlight-V100
+.CFUserTextEncoding
+
+
+####################
+# Python
+####################
+__pycache__
+.ropeproject
+*.py[cod]
+*.wsgic
+
+####################
+# CoffeeScript
+####################
+# source maps
+*.map
+
+####################
+# Tern
+####################
+.tern-port
+
+# Vagrant
+.vagrant/
+
+####################
+# Me
+####################
+mconley.py
+vault-password.txt
+
+####################
+# Universal
+####################
+*.log

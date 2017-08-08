@@ -1,0 +1,47 @@
+[color]
+  ui = true
+[user]
+  name = Mike Conley
+  email = conasdf@gmail.com
+  signingkey = 40D22983
+[core]
+  editor = emacsclient
+  excludesfile = ~/.gitignore_global
+  autocrlf = false
+  safecrlf = true
+[alias]
+  aa = add --all
+  br = branch
+  brd = branch --delete
+  ca = commit --amend
+  cm = commit -m
+  co = checkout
+  cp = cherry-pick
+  cob = checkout -b
+  dc = diff --cached
+  fd = clean -fd
+  pt = fetch --prune origin +refs/tags/*:refs/tags/*
+  rsh = reset --hard
+  st = status -s
+[rerere]
+  enabled = true
+[merge]
+  defaultToUpstream = true
+  tool = meld
+[commit]
+  gpgsign = true
+[push]
+  default = simple
+[credential]
+  helper = osxkeychain
+[fetch]
+  prune = true
+  recurseSubmodules = true
+[diff]
+  submodule = log
+[rebase]
+  autostash = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
