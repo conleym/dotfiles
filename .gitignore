@@ -2,3 +2,5 @@
 .lesshst
 .m2
 .pgpass
+.pip/*
+!.pip/pip.conf
