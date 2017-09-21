@@ -43,13 +43,7 @@ alias emacs="${EMACS}/MacOS/Emacs"
 unset EMACS
 OO="$(app_path LibreOffice)/MacOS"
 
-ANDROID=()
-for subdir in "tools" "platform-tools"; do
-  ANDROID+=~/software/android-sdk/${subdir}
-done
-ANDROID=$(strjoin ':' "${ANDROID[@]}")
-
-export PATH=~/Library/Haskell/bin:~/.cask/bin:~/bin/pylinks:~/bin:${EMACS_BIN}:${ANT_HOME}/bin:${M2_HOME}/bin:${ANDROID}:${PATH}:${OO}
+export PATH=~/Library/Haskell/bin:~/.cask/bin:~/bin/pylinks:~/bin:${EMACS_BIN}:${ANT_HOME}/bin:${M2_HOME}/bin:${PATH}:${OO}
 
 unset ANDROID EMACS_BIN OO
 #
