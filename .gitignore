@@ -1,6 +1,16 @@
+# Contain history, passwords, other sensitive crap that shouldn't be
+# tracked.
 *history*
 .lesshst
-.m2
 .pgpass
+
+# Local repo contains bunch of jars. Maven config can contain
+# passwords.
+.m2
+
+# Ignore pip log and cache, but track config.
 .pip/*
 !.pip/pip.conf
+
+# OpenSSL random seed.
+.rnd
