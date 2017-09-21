@@ -1,8 +1,9 @@
 # Contain history, passwords, other sensitive crap that shouldn't be
 # tracked.
-*history*
-.lesshst
-.pgpass
+*history*   # various history files for shells and apps.
+.lesshst    # less history
+.pgpass     # postgresql usernames & passwords
+.wget-hsts  # wget known hosts database
 
 # Local repo contains bunch of jars. Maven config can contain
 # passwords.
