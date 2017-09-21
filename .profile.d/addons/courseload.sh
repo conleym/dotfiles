@@ -5,13 +5,6 @@ clclone() {
 }
 
 
-pgvutil() {
-    local dbname="${1:-127.0.0.1}"
-    (( $# > 0 )) && shift
-    psql -h util.local -U vagrant -d "${dbname}" "$@"
-}
-
-
 pgdev() {
     local dbname="${1:-127.0.0.1}"
     (( $# > 0 )) && shift
@@ -64,15 +57,6 @@ pgcadbprod() {
   psql --host="localhost" --port="65510" --username="${username}" --dbname="${db}" "$@"
 }
 
-
-# Curl for local engage using custom login info.
-clcurl() {
-    # These will need to be changed regularly, as they expire.
-    local csrf_token=${ENGAGE_CSRF_TOKEN:-'6T9nzxhhEgxGE2d1lZA5c14SV47rESXY'}
-    local session_id=${ENGAGE_SESSION_ID:-'5k7fzt56i7p1ccxuh18hxvn4v0kmya11'}
-
-    curl -v -H "Cookie:csrftoken=${csrf_token}; sessionid=${session_id}" -H "X-CSRFToken:${csrf_token}" "$@"
-}
 
 
 # Reset cocoapods for an xcode project.
