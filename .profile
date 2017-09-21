@@ -12,7 +12,8 @@
 
 # Set some dev tool paths.
 export WORKON_HOME=~/venvs
-export JAVA_HOME=$(/usr/libexec/java_home)
+JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME
 export M2_HOME=~/software/apache-maven
 export ANT_HOME=~/software/apache-ant
 export ANSIBLE_RETRY_FILES_ENABLED=0
@@ -69,19 +70,18 @@ export ALTERNATE_EDITOR="emacs"
 
 # And less my pager for all the things.
 export PAGER="less"
-# I stole the less{open,close}.sh scripts from debian, I think.
-# export LESSOPEN=~"/bin/lessopen.sh %s"
-# export LESSCLOSE=~"/bin/lessclose.sh %s %s"
 export LESSOPEN='| /opt/local/bin/lesspipe.sh %s'
 
 # Don't try to use uninstalled packages.
 export PKG_CONFIG_DISABLE_UNINSTALLED=""
 # Default directories are always searched, but by default path entries come first.
 # So we put the default first *in the path*.
-export PKG_CONFIG_PATH=$(pkg-config --variable pc_path pkg-config)
-export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/opt/X11/lib/pkgconfig:/opt/X11/share/pkgconfig:/usr/lib/pkgconfig:/usr/local/lib/pkgconfig"
+PKG_CONFIG_PATH=$(pkg-config --variable pc_path pkg-config)
+PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/opt/X11/lib/pkgconfig:/opt/X11/share/pkgconfig:/usr/lib/pkgconfig:/usr/local/lib/pkgconfig"
+export PKG_CONFIG_PATH
 
-export AWKPATH=$(awk_default_awkpath)
+AWKPATH=$(awk_default_awkpath)
+export AWKPATH
 
 alias config='git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
@@ -127,7 +127,9 @@ fi
 # Use `hub` in place of `git`
 #eval "$(hub alias -s)"
 
-export CC=$(xcrun --find clang)
+CC=$(xcrun --find clang)
+export CC
+
 # Add macports and X11 dirs to lib/include paths for command line builds.
 export LDFLAGS="${LDFLAGS} -L/opt/X11/lib -L/opt/local/lib"
 export CPPFLAGS="${CPPFLAGS} -I/opt/X11/include -I/opt/local/include"
