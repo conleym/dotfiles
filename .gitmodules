@@ -4,3 +4,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/conleym/dot-emacs
+[submodule ".nvm"]
+	path = .nvm
+	url = https://github.com/creationix/nvm.git
