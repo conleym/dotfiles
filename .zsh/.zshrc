@@ -31,10 +31,6 @@ plugins=(ant aws brew cabal catimg celery colored-man cpanm
 source $ZSH/oh-my-zsh.sh
 # end of oh-my-zsh config
 
-
-# Load SCM Breeze
-#. ~/.profile.d/scm_breeze.sh
-
 # Load all shell addons
 load_all_addons
 
