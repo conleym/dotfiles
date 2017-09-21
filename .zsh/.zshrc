@@ -41,5 +41,7 @@ load_all_addons
 # Named bash_completion, but also works with zsh and bashcompinit.
 [[ -r ~/.nvm/bash_completion ]] && . ~/.nvm/bash_completion
 
-# Requires bashcompinit.
-eval "$(grunt --completion=bash)"
+if command -v grunt 2>&1 >/dev/null; then
+    # Requires bashcompinit.
+    eval "$(grunt --completion=bash)"
+fi
