@@ -1,29 +1,29 @@
 # -*- mode: shell-script; -*-
 
 # Enable dirstack
-function cd() {
+cd() {
     local dir=${1:-~}
     # suppress dirstack output
     pushd "${dir}" > /dev/null
 }
 
 
-function cd..() {
+cd..() {
     cd ..
 }
 
 
-function cd-() {
+cd-() {
     cd -
 }
 
 
-function lh() {
+lh() {
     ls -Alh "$@"
 }
 
 
-function lrot() {
+lrot() {
     ls -Alhrot "$@"
 }
 
@@ -31,7 +31,7 @@ function lrot() {
 # up N
 # Go up N directories.  Default value for N is 1.
 #
-function up() {
+up() {
     local num=${1:-1};
     if [ "${num}" -le 0 ]; then
         return 2;
@@ -46,6 +46,6 @@ function up() {
 }
 
 
-function which() {
+which() {
     (alias; declare -f) | gwhich --tty-only --read-alias --read-functions --show-tilde --show-dot "$@"
 }

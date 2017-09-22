@@ -1,6 +1,7 @@
-function javaselect() {
+javaselect() {
     local version="${1}"
-    export JAVA_HOME=$(/usr/libexec/java_home -v "${version}")
+    JAVA_HOME=$(/usr/libexec/java_home -v "${version}")
+    export JAVA_HOME
     launchctl setenv JAVA_HOME "${JAVA_HOME}"
 
     # TODO restart finder/dock (???) so the launchctl setting can take effect?
