@@ -1,3 +1,6 @@
+# Ignore the repo itself.
+.cfg/
+
 # Contain history, passwords, other sensitive crap that shouldn't be
 # tracked.
 *history*   # various history files for shells and apps.
