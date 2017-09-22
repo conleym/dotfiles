@@ -8,12 +8,9 @@ function cd() {
 }
 
 
-if is_bash; then
-    # Oh my zsh appears to define this for zsh.
-    function cd..() {
-        cd ..
-    }
-fi
+function cd..() {
+    cd ..
+}
 
 
 function cd-() {
