@@ -25,7 +25,7 @@ ZSH_THEME="robbyrussell"
 plugins=(ant aws brew cabal catimg celery colored-man cpanm
          docker encode64 gem git
          jsontools lein macports mvn npm nyan osx pep8 perl pip pylint python
-         redis-cli screen supervisor svn terminalapp themes tmux urltools
+         redis-cli screen svn terminalapp themes tmux urltools
          vagrant virtualenv virtualenvwrapper web-search xcode)
 
 source $ZSH/oh-my-zsh.sh
@@ -38,6 +38,5 @@ load_all_addons
 [[ -r ~/.nvm/bash_completion ]] && . ~/.nvm/bash_completion
 
 if command -v grunt 2>&1 >/dev/null; then
-    # Requires bashcompinit.
-    eval "$(grunt --completion=bash)"
+    eval "$(grunt --completion=zsh)"
 fi
