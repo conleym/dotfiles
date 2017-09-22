@@ -58,15 +58,6 @@ pgcadbprod() {
 }
 
 
-
-# Reset cocoapods for an xcode project.
-podreset() {
-  pod repo remove master
-  pod setup
-  pod install
-}
-
-
 # Update all the git things
 clupdate() {
     find ~/courseload -maxdepth 1 -type d -not -name '.*' -not -name '*.bak' \
