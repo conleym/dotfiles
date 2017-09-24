@@ -46,7 +46,7 @@ OO="$(app_path LibreOffice)/MacOS"
 
 export PATH=~/Library/Haskell/bin:~/.cask/bin:~/bin/pylinks:~/bin:${EMACS_BIN}:${ANT_HOME}/bin:${M2_HOME}/bin:${PATH}:${OO}
 
-unset ANDROID EMACS_BIN OO
+unset EMACS_BIN OO
 #
 # $PATH is now built (mostly -- some executables will modify it further later on).
 
