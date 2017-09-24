@@ -1,6 +1,3 @@
-export AWS_MFA_SERIAL="arn:aws:iam::489515563883:mfa/mike.conley+prod@unizin.org"
-
-
 _other_aws_common_stuff() {
   export AWS_DEFAULT_PROFILE="${AWS_PROFILE}"
   local SCRIPT
@@ -25,24 +22,6 @@ EOF
   local RESULT
   RESULT=$(echo "${SCRIPT}" | python)
   eval "${RESULT}"
-}
-
-
-aws_unizin() {
-  export AWS_PROFILE=unizin
-  _other_aws_common_stuff
-}
-
-
-aws_prod() {
-  export AWS_PROFILE="unizin-prod"
-  _other_aws_common_stuff
-}
-
-
-aws_cl() {
-  export AWS_PROFILE=courseload
-  _other_aws_common_stuff
 }
 
 

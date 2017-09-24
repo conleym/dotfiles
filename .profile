@@ -94,7 +94,7 @@ venvwrapper_setup
 
 # Set up AWS variable(s).
 . ~/.profile.d/aws.sh
-aws_unizin
+aws_mine
 
 # Set up thefuck
 . ~/.profile.d/thefuck.sh
