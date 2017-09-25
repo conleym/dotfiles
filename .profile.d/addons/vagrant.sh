@@ -3,8 +3,6 @@ function vagrant() {
   EXE="/usr/local/bin/vagrant"
   if [[ "${1}" == "reup" ]]; then
     "${EXE}" destroy -f; "${EXE}" up
-  elif [[ "${1}" == "restart" ]]; then
-    "${EXE}" halt && "${EXE}" up
   elif [[ "${1}" == "st" ]]; then
     "${EXE}" status
   else
