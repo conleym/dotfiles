@@ -16,15 +16,16 @@ JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME
 export M2_HOME=~/software/apache-maven
 export ANT_HOME=~/software/apache-ant
-export ANSIBLE_RETRY_FILES_ENABLED=0
-export ANSIBLE_NOCOWS=1
 export CVSROOT=~/repositories/cvs
-
 # Move the babel cache
 export BABEL_CACHE_PATH=~/.cache/babel-cache.json
 
 # Default is waaay too long.
 export PGCONNECT_TIMEOUT=2
+
+export ANSIBLE_RETRY_FILES_ENABLED=0
+export ANSIBLE_NOCOWS=1
+
 
 # Somehow the parallels provider makes itself the default. Annoying.
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
