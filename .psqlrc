@@ -6,3 +6,4 @@
 \set HISTSIZE 200000
 \set PROMPT1 '%n@%M/%~%R%# '
 \set ON_ERROR_ROLLBACK interactive
+\x auto
