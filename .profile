@@ -109,27 +109,6 @@ aws_mine
 # Tell perl to use ~/perl5 for libraries.
 [ $SHLVL -eq 1 ] && eval "$(perl -I"${HOME}"/perl5/lib/perl5 -Mlocal::lib)"
 
-
-# rbenv setup
-#if [[ -d ~/.rbenv ]]; then
-#  PATH="${PATH}:"~"/.rbenv/bin"
-#  eval "$(rbenv init -)"
-# fi
-# Add binaries from local rubygems install to path. Needed for puppet-lint.
-#if which ruby >/dev/null && which gem >/dev/null; then
-#  PATH="${PATH}:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
-#fi
-
-# pyenv setup
-#if [[ -d ~/.pyenv ]]; then
-#  export PYENV_ROOT=~"/.pyenv"
-#  export PATH="${PATH}:${PYENV_ROOT}/bin"
-#  eval "$(pyenv init -)"
-#  if [[ -d ~/.pyenv/plugins/pyenv-virtualenv ]]; then
-#    eval "$(pyenv virtualenv-init -)"
-#  fi
-#fi
-
 # Use `hub` in place of `git`
 #eval "$(hub alias -s)"
 
