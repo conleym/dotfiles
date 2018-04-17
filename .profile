@@ -21,11 +21,13 @@ export CVSROOT=~/repositories/cvs
 export BABEL_CACHE_PATH=~/.cache/babel-cache.json
 
 # Default is waaay too long.
-export PGCONNECT_TIMEOUT=2
+export PGCONNECT_TIMEOUT=10
 
 export ANSIBLE_RETRY_FILES_ENABLED=0
 export ANSIBLE_NOCOWS=1
 
+# Matplotlib isn't installed as a framework.
+export MPLBACKEND=Agg
 
 # Somehow the parallels provider makes itself the default. Annoying.
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
@@ -53,6 +55,9 @@ unset EMACS_BIN OO
 
 export MANPATH="${EMACS_MAN}:${MANPATH}"
 unset EMACS_MAN
+
+# Prepend macports manpages to MANPATH
+export MANPATH="/opt/local/share/man:$MANPATH"
 
 # History control variables shared by bash and zsh.
 export HISTCONTROL="erasedups"
@@ -106,14 +111,14 @@ aws_mine
 
 
 # rbenv setup
-if [[ -d ~/.rbenv ]]; then
-  PATH="${PATH}:"~"/.rbenv/bin"
-  eval "$(rbenv init -)"
-fi
+#if [[ -d ~/.rbenv ]]; then
+#  PATH="${PATH}:"~"/.rbenv/bin"
+#  eval "$(rbenv init -)"
+# fi
 # Add binaries from local rubygems install to path. Needed for puppet-lint.
-if which ruby >/dev/null && which gem >/dev/null; then
-  PATH="${PATH}:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
-fi
+#if which ruby >/dev/null && which gem >/dev/null; then
+#  PATH="${PATH}:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
+#fi
 
 # pyenv setup
 #if [[ -d ~/.pyenv ]]; then
