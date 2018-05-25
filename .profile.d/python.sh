@@ -8,9 +8,9 @@ python_version() {
 
 
 python_user_dir() {
-    local PYTHONV
-    PYTHONV=$(python_version)
-    echo ~/Library/Python/"${PYTHONV}"
+    local USERDIR
+    USERDIR=$(python -m site --user-base)
+    echo "${USERDIR}"
 }
 
 
