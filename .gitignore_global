@@ -21,16 +21,15 @@ auto/*.el
 .Spotlight-V100
 .CFUserTextEncoding
 
-
 ####################
 # Python
 ####################
 __pycache__/
 .mypy_cache/
+.pytest_cache/
 .ropeproject
 *.py[cod]
 *.wsgic
-
 
 ####################
 # JavaScript
