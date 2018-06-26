@@ -24,13 +24,6 @@ EOF
   eval "${RESULT}"
 }
 
-
-aws_ev() {
-    export AWS_PROFILE=ev
-    _other_aws_common_stuff
-}
-
-
 aws_mine() {
   export AWS_PROFILE=personal
   _other_aws_common_stuff
