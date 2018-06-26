@@ -12,13 +12,6 @@ auto/*.el
 # Other things
 .dir-locals.el
 
-
-####################
-# floobits:
-####################
-.floo
-.flooignore
-
 ####################
 # OS X stuff:
 ####################
@@ -40,7 +33,7 @@ __pycache__/
 
 
 ####################
-# CoffeeScript
+# JavaScript
 ####################
 # source maps
 *.map
@@ -52,12 +45,6 @@ __pycache__/
 
 # Vagrant
 .vagrant/
-
-####################
-# Me
-####################
-mconley.py
-vault-password.txt
 
 ####################
 # Universal
