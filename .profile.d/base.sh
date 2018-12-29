@@ -27,6 +27,9 @@ sourceall() {
     done
 }
 
+is_regular_and_readable() {
+    [ -f "${1}" ] && [ -r "${1}" ]
+}
 
 # Shortcut for assigning a heredoc to a variable.
 # http://stackoverflow.com/a/8088167
