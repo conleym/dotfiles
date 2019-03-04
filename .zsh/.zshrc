@@ -24,8 +24,8 @@ ZSH=~/.zsh/oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(ant aws brew cabal catimg celery colored-man cpanm
          docker encode64 fab gem git
-         jsontools lein macports mvn npm nyan osx pep8 perl pip pylint python
-         redis-cli screen svn terminalapp themes tmux urltools
+         jsontools lein macports mvn npm osx pep8 perl pip pylint python
+         screen svn terminalapp themes tmux urltools
          vagrant virtualenv virtualenvwrapper web-search xcode)
 
 source $ZSH/oh-my-zsh.sh
