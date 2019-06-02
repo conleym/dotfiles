@@ -38,19 +38,24 @@ define() {
     read -r -d '' "${1}" || true
 }
 
-# Load all addons.
-load_all_addons() {
-    # Temporarily allow nullglob so we don't get errors if addons is empty.
+
+# Glob without warnings or errors if no files match
+globall() {
     if is_bash; then
         shopt -s nullglob
-        sourceall ~/.profile.d/addons/*.sh
+        eval "$@"
         shopt -u nullglob
     elif is_zsh; then
         setopt null_glob
-        sourceall ~/.profile.d/addons/*.sh
+        eval "$@"
         unsetopt null_glob
-    # TODO what to do about other shells?
+        # TODO what to do about other shells?
     fi
+}
+
+# Load all addons.
+load_all_addons() {
+    globall "sourceall ~/.profile.d/addons/*.sh"
 }
 
 

@@ -2,7 +2,7 @@
   ui = true
 [user]
   name = Mike Conley
-  email = conasdf@gmail.com
+  email = conleym@users.noreply.github.com
   signingkey = 40D22983
 [core]
   editor = emacsclient

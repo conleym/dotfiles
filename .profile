@@ -120,4 +120,4 @@ export LDFLAGS="${LDFLAGS} -L/opt/X11/lib -L/opt/local/lib"
 export CPPFLAGS="${CPPFLAGS} -I/opt/X11/include -I/opt/local/include"
 
 
-ssh-add -K ~/.ssh/*.pem > /dev/null 2>&1
+globall "ssh-add -K ~/.ssh/*.pem > /dev/null 2>&1"
