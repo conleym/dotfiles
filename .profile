@@ -47,7 +47,7 @@ alias emacs="${EMACS}/MacOS/Emacs"
 unset EMACS
 OO="$(app_path LibreOffice)/MacOS"
 
-export PATH=~/.cabal/bin:~/.ghcup/bin:~/bin:~/bin/pylinks:${EMACS_BIN}:${ANT_HOME}/bin:${M2_HOME}/bin:${PATH}:${OO}
+export PATH=~/bin:~/.cabal/bin:~/.ghcup/bin:~/.local/bin:~/bin/pylinks:${EMACS_BIN}:${ANT_HOME}/bin:${M2_HOME}/bin:${PATH}:${OO}
 
 unset EMACS_BIN OO
 #
