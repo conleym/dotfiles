@@ -22,8 +22,8 @@ autoload -U +X bashcompinit && bashcompinit
 DISABLE_UPDATE_PROMPT=true
 ZSH=~/.zsh/oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(ant aws brew cabal catimg celery colored-man cpanm
-         docker encode64 fab gem git
+plugins=(ant aws brew cabal catimg celery colored-man-pages cpanm
+         docker encode64 fabric gem git
          jsontools lein macports mvn npm osx pep8 perl pip pylint python
          screen svn terminalapp themes tmux urltools
          vagrant virtualenv virtualenvwrapper web-search xcode)
