@@ -34,6 +34,9 @@ source $ZSH/oh-my-zsh.sh
 # Load all shell addons
 load_all_addons
 
+# iTerm2 shell integration
+maybe_source  ~/.zsh/.iterm2_shell_integration.zsh
+
 # Named bash_completion, but also works with zsh and bashcompinit.
 [[ -r ~/.nvm/bash_completion ]] && . ~/.nvm/bash_completion
 

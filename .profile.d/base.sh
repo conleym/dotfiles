@@ -113,3 +113,10 @@ strjoin() {
 warn() {
     echo "$@" 1>&2
 }
+
+
+maybe_source() {
+    if is_regular_and_readable "$@"; then
+        . "$@"
+    fi
+}
