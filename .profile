@@ -37,6 +37,9 @@ if [ -n "${XTERM_VERSION}" ]; then
   export TERM=xterm-256color
 fi
 
+# Prevent python crashes. See https://github.com/ansible/ansible/issues/32499#issuecomment-341578864
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 #
 # Build $PATH
 #
