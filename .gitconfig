@@ -14,12 +14,14 @@
   br = branch
   brd = branch --delete
   ca = commit --amend
+  ch = commit --amend -C HEAD
   cm = commit -m
   co = checkout
   cp = cherry-pick
   cob = checkout -b
   dc = diff --cached
   fd = clean -fd
+  pf = push --force-with-lease
   pt = fetch --prune origin +refs/tags/*:refs/tags/*
   rsh = reset --hard
   st = status -s
