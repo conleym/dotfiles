@@ -46,7 +46,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 EMACS=$(app_path Emacs)
 EMACS_BIN="${EMACS}/MacOS:${EMACS}/MacOS/bin"
 EMACS_MAN="${EMACS}/Resources/man"
-alias emacs="${EMACS}/MacOS/Emacs"
+alias emacs="${EMACS}/MacOS/Emacs -nw"
 unset EMACS
 OO="$(app_path LibreOffice)/MacOS"
 
