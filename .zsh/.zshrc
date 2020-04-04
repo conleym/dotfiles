@@ -1,48 +1,33 @@
-# Start with common profile.
-. ~/.profile
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export EDITOR=
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Make emacs my editor for all the things.
+export EDITOR=emacsclient               # lots of things
+export FCEDIT="${EDITOR}"               # for fc -e (shell builtin)
+export MP_EDITOR="${EDITOR}"            # macports
+export VISUAL="${EDITOR}"               # lots of things
+
+# Start emacs daemon automatically
+export ALTERNATE_EDITOR=''
 
 
-HISTFILE=~/.zsh/.histfile
-SAVEHIST=${HISTSIZE}
-
-setopt append_history autocd autopushd extended_glob glob_dots hist_verify \
-       hist_ignore_all_dups pushd_ignore_dups pushd_silent pushd_to_home
-# beeping is dumb
-unsetopt beep
-# emacs mode
-bindkey -e
-zstyle :compinstall filename '/Users/mike/.zsh/.zshrc'
-
-autoload -Uz compinit && compinit
-# Makes bash completion work, too.
-autoload -U +X bashcompinit && bashcompinit
+# Virtualenvwrapper needs to use python3, because that's where it's installed.
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 
-# oh-my-zsh config
+# Configure lesspipe. Note that less is already the default pager on macOS.
+export LESSOPEN='| /opt/local/bin/lesspipe.sh %s'
+
+export THEFUCK_REQUIRE_CONFIRMATION='true'
+eval $(thefuck --alias)
+
+alias config='git --git-dir=$HOME/.cfg --work-tree=$HOME'
+
+
+# oh-my-zsh
 DISABLE_UPDATE_PROMPT=true
-ZSH=~/.zsh/oh-my-zsh
-ZSH_THEME="robbyrussell"
-plugins=(ant aws cabal catimg celery colored-man-pages cpanm
-         docker encode64 extract fabric gem git
-         jsontools lein macports mvn node npm osx
-         pep8 perl pip pyenv pylint python
-         screen shell-aws-autoprofile svn themes tmux urltools
-         vagrant virtualenv virtualenvwrapper vscode web-search xcode yarn)
-
-source $ZSH/oh-my-zsh.sh
-# end of oh-my-zsh config
-
-# Load all shell addons
-load_all_addons
-
-# iTerm2 shell integration
-maybe_source  ~/.zsh/.iterm2_shell_integration.zsh
-
-maybe_source /opt/local/etc/profile.d/bash_completion.sh
-
-# Named bash_completion, but also works with zsh and bashcompinit.
-maybe_source ~/.nvm/bash_completion
-
-if command -v grunt 2>&1 >/dev/null; then
-    eval "$(grunt --completion=zsh)"
-fi
+ZSH=~/.zsh/ohmyzsh
+plugins=(ansible aws colored-man-pages docker git macports npm nvm osx pip virtualenv virtualenvwrapper yarn)
+. $ZSH/oh-my-zsh.sh

@@ -11,6 +11,7 @@
 auto/*.el
 # Other things
 .dir-locals.el
+flycheck_*.el
 
 ####################
 # OS X stuff:

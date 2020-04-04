@@ -20,7 +20,7 @@ except ImportError as e:
   print('export AWS_SECRET_ACCESS_KEY=' + p.get_secret_key())
 EOF
   local RESULT
-  RESULT=$(echo "${SCRIPT}" | python)
+  RESULT=$(echo "${SCRIPT}" | /usr/bin/python3)
   eval "${RESULT}"
 }
 
