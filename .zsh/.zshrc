@@ -1,6 +1,26 @@
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -r "${HOME}/.profile.d/base.sh" && source "${HOME}/.profile.d/base.sh"
 
-export EDITOR=
+maybe_source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+export HISTIGNORE=""
+export HISTFILESIZE=100000
+export HISTSIZE=${HISTFILESIZE}
+export SAVEHIST=${HISTSIZE}
+
+setopt append_history hist_verify hist_ignore_all_dups hist_reduce_blanks
+
+
+# cd_silent requires 5.8+
+# TODO note that this check only works up til 5.10 comes out, at which point it will
+# need adjustment.
+if [[ "${ZSH_VERSION}" > '5.8' || "${ZSH_VERSION}" == '5.8' ]]; then
+    setopt cd_silent
+fi
+setopt pushd_silent pushd_to_home
+
+setopt extended_glob glob_star_short glob_dots
+
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Make emacs my editor for all the things.
@@ -9,7 +29,7 @@ export FCEDIT="${EDITOR}"               # for fc -e (shell builtin)
 export MP_EDITOR="${EDITOR}"            # macports
 export VISUAL="${EDITOR}"               # lots of things
 
-# Start emacs daemon automatically
+# Start emacs server automatically as needed when emacsclient runs.
 export ALTERNATE_EDITOR=''
 
 
@@ -25,9 +45,22 @@ eval $(thefuck --alias)
 
 alias config='git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
+zstyle ':compinstall' filename "${HOME}/.zsh/.zshrc"
+
+# Enable tab completion
+autoload -Uz +X compinit && compinit
+# Add zsh-completions to function path.
+fpath=(/opt/local/share/zsh/site-functions $fpath)
+
+# Makes bash completion work, too.
+autoload -Uz +X bashcompinit && bashcompinit
+# Load bash completion scripts.
+maybe_source /opt/local/etc/profile.d/bash_completion.sh
 
 # oh-my-zsh
 DISABLE_UPDATE_PROMPT=true
 ZSH=~/.zsh/ohmyzsh
 plugins=(ansible aws colored-man-pages docker git macports npm nvm osx pip virtualenv virtualenvwrapper yarn)
 . $ZSH/oh-my-zsh.sh
+
+globall "sourceall ~/.profile.d/addons/*.sh"
