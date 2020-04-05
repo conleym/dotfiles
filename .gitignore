@@ -13,6 +13,8 @@
 # wget known hosts database
 .wget-hsts
 
+.Xauthority
+
 
 # Local repo contains bunch of jars. Maven config can contain
 # passwords.
@@ -21,13 +23,14 @@
 # OpenSSL random seed.
 .rnd
 
-# IDK lol
+# IDK lol -- some node thing or other.
 .config/configstore/
 
-# Various cached things.
+# Various cached or app-specific things that don't belong in vc.
 .ansible/
+.terraform.d/
 .cache/
-
+.vagrant.d/
 .emacs.d/
 .gnupg/
 .gnupg_pre_2.1/
@@ -37,6 +40,10 @@
 .macports/
 .npm/
 .nvm/
+.virtualenvs/
+.docker/
+.viminfo
+.dropbox/
 
 # Things oracle likes to shit into $HOME.
 .oracle_jre_usage/
@@ -50,3 +57,4 @@ Library/
 Movies/
 Music/
 Pictures/
+Parallels/
