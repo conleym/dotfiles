@@ -56,11 +56,12 @@ fpath=(/opt/local/share/zsh/site-functions $fpath)
 autoload -Uz +X bashcompinit && bashcompinit
 # Load bash completion scripts.
 maybe_source /opt/local/etc/profile.d/bash_completion.sh
+maybe_source ~/.nvm/bash_completion
 
 # oh-my-zsh
 DISABLE_UPDATE_PROMPT=true
 ZSH=~/.zsh/ohmyzsh
-plugins=(ansible aws colored-man-pages docker git macports npm nvm osx pip virtualenv virtualenvwrapper yarn)
+plugins=(ansible aws colored-man-pages docker git macports npm osx pip virtualenv virtualenvwrapper yarn)
 . $ZSH/oh-my-zsh.sh
 
 globall "sourceall ~/.profile.d/addons/*.sh"
