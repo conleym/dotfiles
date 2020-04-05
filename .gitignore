@@ -3,10 +3,16 @@
 
 # Contain history, passwords, other sensitive crap that shouldn't be
 # tracked.
-*history*   # various history files for shells and apps.
-.lesshst    # less history
-.pgpass     # postgresql usernames & passwords
-.wget-hsts  # wget known hosts database
+
+# various history files for shells and apps.a
+*history*
+# less history    
+.lesshst
+# postgresql usernames & passwords 
+.pgpass
+# wget known hosts database
+.wget-hsts
+
 
 # Local repo contains bunch of jars. Maven config can contain
 # passwords.
@@ -19,18 +25,25 @@
 # OpenSSL random seed.
 .rnd
 
+# IDK lol
+.config/configstore/
+
+# Various cached things.
+.ansible/
+.cache/
+
 .emacs.d/
 .gnupg/
 .gnupg_pre_2.1/
 .iterm2/
-.iterm_2_shell_integration.*
+.iterm2_shell_integration.*
 .lpass/
 .macports/
 .npm/
 .nvm/
 
 # Things oracle likes to shit into $HOME.
-.oracle_jvm_usage/
+.oracle_jre_usage/
 
 Applications*/
 Desktop/
