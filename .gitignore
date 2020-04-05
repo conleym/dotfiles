@@ -18,3 +18,26 @@
 
 # OpenSSL random seed.
 .rnd
+
+.emacs.d/
+.gnupg/
+.gnupg_pre_2.1/
+.iterm2/
+.iterm_2_shell_integration.*
+.lpass/
+.macports/
+.npm/
+.nvm/
+
+# Things oracle likes to shit into $HOME.
+.oracle_jvm_usage/
+
+Applications*/
+Desktop/
+Documents/
+Downloads/
+Dropbox/
+Library/
+Movies/
+Music/
+Pictures/
