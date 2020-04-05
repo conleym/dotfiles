@@ -18,10 +18,6 @@
 # passwords.
 .m2
 
-# Ignore pip log and cache, but track config.
-.pip/*
-!.pip/pip.conf
-
 # OpenSSL random seed.
 .rnd
 
