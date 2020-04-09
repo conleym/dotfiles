@@ -61,7 +61,7 @@ maybe_source ~/.nvm/bash_completion
 # oh-my-zsh
 DISABLE_UPDATE_PROMPT=true
 ZSH=~/.zsh/ohmyzsh
-plugins=(ansible aws colored-man-pages docker git macports npm osx pip virtualenv virtualenvwrapper yarn)
+plugins=(alias-finder ansible aws catimg colored-man-pages docker git macports npm osx pip virtualenv virtualenvwrapper yarn)
 . $ZSH/oh-my-zsh.sh
 
 globall "sourceall ~/.profile.d/addons/*.sh"
