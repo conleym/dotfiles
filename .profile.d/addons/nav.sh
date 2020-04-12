@@ -1,6 +1,11 @@
-alias lh='ls -Alh'
-alias lrot='ls -Alhrot'
-
+# long listing.
+alias ll='ls -lhF'
+# long listing with extended attributes and flags.
+alias llx='ll -@O'
+alias lh='ll -A'
+alias lhx='lh -@O'
+alias lhx='ls -Alh@OF'
+alias lrot='ls -AlhrotF'
 
 # Enable dirstack
 cd() {
