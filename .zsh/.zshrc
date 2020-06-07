@@ -21,7 +21,7 @@ setopt pushd_silent pushd_to_home
 
 setopt extended_glob glob_star_short glob_dots
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Make emacs my editor for all the things.
 export EDITOR=emacsclient               # lots of things
@@ -44,7 +44,7 @@ eval $(thefuck --alias)
 
 alias config='git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
-zstyle ':compinstall' filename "${HOME}/.zsh/.zshrc"
+#zstyle ':compinstall' filename "${HOME}/.zsh/.zshrc"
 
 # Enable tab completion
 autoload -Uz +X compinit && compinit
