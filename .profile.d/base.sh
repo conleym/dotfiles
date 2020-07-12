@@ -64,3 +64,12 @@ sourceall() {
         maybe_source "${file}"
     done
 }
+
+
+python_user_dir() {
+    local VERSION
+    local USERDIR
+    VERSION="${1:-}"
+    USERDIR=$("python${VERSION}" -m site --user-base)
+    echo "${USERDIR}"
+}

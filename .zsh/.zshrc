@@ -1,7 +1,8 @@
-test -r "${HOME}/.profile.d/base.sh" && source "${HOME}/.profile.d/base.sh"
-
 maybe_source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Enable ls -G.
+export CLICOLOR=""
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
 
 export HISTIGNORE=""
 export HISTFILESIZE=100000
@@ -62,5 +63,9 @@ DISABLE_UPDATE_PROMPT=true
 ZSH=~/.zsh/ohmyzsh
 plugins=(alias-finder ansible aws catimg colored-man-pages docker git macports npm osx pip virtualenv virtualenvwrapper yarn)
 . $ZSH/oh-my-zsh.sh
+
+# aliased to 'ls -G' by oh-my-zsh, but handled by CLICOLOR env var.
+# This alias messes with eshell, mainly because gnu ls and bsd ls disagree on the meaning of -G.
+alias ls='ls -F'
 
 globall "sourceall ~/.profile.d/addons/*.sh"
