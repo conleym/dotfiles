@@ -38,10 +38,6 @@ __pycache__/
 # source maps
 *.map
 
-####################
-# Tern
-####################
-.tern-port
 
 # Vagrant
 .vagrant/
