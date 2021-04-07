@@ -12,9 +12,8 @@
 .pgpass
 # wget known hosts database
 .wget-hsts
-
+# Magic cookies.
 .Xauthority
-
 
 # Local repo contains bunch of jars. Maven config can contain
 # passwords.
@@ -44,6 +43,7 @@
 .docker/
 .viminfo
 .dropbox/
+nltk_data/
 
 # Things oracle likes to shit into $HOME.
 .oracle_jre_usage/
