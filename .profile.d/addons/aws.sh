@@ -1,9 +1,9 @@
 _other_aws_common_stuff() {
-  export AWS_DEFAULT_PROFILE="${AWS_PROFILE}"
-  local SCRIPT
-  unset AWS_ACCESS_KEY_ID
-  unset AWS_SECRET_ACCESS_KEY
-  define SCRIPT <<EOF
+    export AWS_DEFAULT_PROFILE="${AWS_PROFILE}"
+    local SCRIPT
+    unset AWS_ACCESS_KEY_ID
+    unset AWS_SECRET_ACCESS_KEY
+    define SCRIPT <<EOF
 try:
   # Prefer boto3
   from botocore.session import Session
@@ -19,22 +19,33 @@ except ImportError as e:
   print('export AWS_ACCESS_KEY_ID=' + p.get_access_key())
   print('export AWS_SECRET_ACCESS_KEY=' + p.get_secret_key())
 EOF
-  local RESULT
-  RESULT=$(echo "${SCRIPT}" | /usr/bin/python3)
-  eval "${RESULT}"
+    local RESULT
+    RESULT=$(echo "${SCRIPT}" | /usr/bin/python3)
+    eval "${RESULT}"
+}
+
+
+use_aws() {
+    export AWS_PROFILE="${1}"
+    _other_aws_common_stuff
 }
 
 aws_mine() {
-  export AWS_PROFILE=personal
-  _other_aws_common_stuff
+    use_aws personal
 }
 
 
 # http://stackoverflow.com/questions/33791069/quick-way-to-get-aws-account-number-from-the-cli-tools
 aws_account_id() {
- aws ec2 describe-security-groups \
-    --group-names 'Default' \
-    --query 'SecurityGroups[0].OwnerId' \
-    --output text
+    aws ec2 describe-security-groups \
+        --group-names 'Default' \
+        --query 'SecurityGroups[0].OwnerId' \
+        --output text
 }
+
+
+# Local Variables:
+# mode: sh
+# sh-shell: zsh
+# End:
 

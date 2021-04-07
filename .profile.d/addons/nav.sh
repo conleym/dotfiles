@@ -53,3 +53,9 @@ findgrep() {
 qfind() {
     find "$@" 2>/dev/null
 }
+
+
+# Local Variables:
+# mode: sh
+# sh-shell: zsh
+# End:

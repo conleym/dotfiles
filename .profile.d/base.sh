@@ -73,3 +73,9 @@ python_user_dir() {
     USERDIR=$("python${VERSION}" -m site --user-base)
     echo "${USERDIR}"
 }
+
+
+# Local Variables:
+# mode: sh
+# sh-shell: zsh
+# End:
