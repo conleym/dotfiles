@@ -1,4 +1,4 @@
-maybe_source "${HOME}/.iterm2_shell_integration.zsh"
+maybe_source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
 
 # Enable ls -G.
 export CLICOLOR=""
