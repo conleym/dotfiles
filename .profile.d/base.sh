@@ -75,6 +75,12 @@ python_user_dir() {
 }
 
 
+app_bindir() {
+    local APP
+    APP="${1}"
+    echo "/Applications/${APP}.app/Contents/MacOS/"
+}
+
 # Local Variables:
 # mode: sh
 # sh-shell: zsh
