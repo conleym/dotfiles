@@ -17,20 +17,25 @@
 
 # Local repo contains bunch of jars. Maven config can contain
 # passwords.
-.m2
+.m2/
+
+# Contains credentials.
+.aws/
 
 # OpenSSL random seed.
 .rnd
 
-# IDK lol -- some node thing or other.
-.config/configstore/
+# .config/ contains lots of garbage, but also the occasional file that's
+# useful to track.
+.config/
+!.config/fontconfig/fonts.conf
+!.config/thefuck/settings.py
 
 # Various cached or app-specific things that don't belong in vc.
 .ansible/
-.terraform.d/
 .cache/
-.vagrant.d/
-.emacs.d/
+.docker/
+.dropbox/
 .gnupg/
 .gnupg_pre_2.1/
 .iterm2/
@@ -39,11 +44,20 @@
 .macports/
 .npm/
 .nvm/
-.virtualenvs/
-.docker/
+.parallel/
+.terraform.d/
+.vagrant.d/
 .viminfo
-.dropbox/
+.virtualenvs/
+
+# yarn last update timestamp, apparently
+.yarnrc
+
+# Data from a python package.
 nltk_data/
+
+# Separate repo
+.emacs.d/
 
 # Things oracle likes to shit into $HOME.
 .oracle_jre_usage/
@@ -59,3 +73,6 @@ Music/
 Parallels/
 Pictures/
 .Trash/
+
+src/
+var/
