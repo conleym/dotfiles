@@ -16,6 +16,11 @@ isodate() {
 }
 
 
+epochdate() {
+    date -j -f "%a %b %d %T %Z %Y" "$(date)" "+%s"
+}
+
+
 pubip() {
     curl ipecho.net/plain; echo
 }
