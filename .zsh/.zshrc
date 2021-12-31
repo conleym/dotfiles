@@ -61,7 +61,7 @@ maybe_source ~/.nvm/bash_completion
 # oh-my-zsh
 DISABLE_UPDATE_PROMPT=true
 ZSH=~/.zsh/ohmyzsh
-plugins=(alias-finder ansible aws catimg colored-man-pages docker git macports npm osx pip virtualenv virtualenvwrapper yarn)
+plugins=(alias-finder ansible aws catimg colored-man-pages docker git macos macports npm pip virtualenv virtualenvwrapper yarn)
 . $ZSH/oh-my-zsh.sh
 
 # aliased to 'ls -G' by oh-my-zsh, but handled by CLICOLOR env var.
