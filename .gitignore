@@ -44,6 +44,7 @@
 .macports/
 .npm/
 .nvm/
+.nylas/
 .parallel/
 .terraform.d/
 .vagrant.d/
@@ -76,3 +77,6 @@ Pictures/
 
 src/
 var/
+
+# work
+evhome/

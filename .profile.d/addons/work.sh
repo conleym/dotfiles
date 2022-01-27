@@ -1,6 +1,8 @@
-export PATH=~/ev/bin:"${PATH}"
-. ~/ev/shell/data.sh
-. ~/ev/shell/postgresql.sh 
+export EVHOME=~/evhome
+
+export PATH="${EVHOME}/ev/bin:${PATH}"
+. "${EVHOME}/ev/shell/data.sh"
+. "${EVHOME}/ev/shell/postgresql.sh"
 
 
 # Local Variables:

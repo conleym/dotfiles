@@ -4,8 +4,8 @@
   name = Mike Conley
   email = conleym@users.noreply.github.com
   signingkey = 40D22983
-[includeIf "gitdir:~/ev/"]
-  path = ~/ev/.gitconfig
+[includeIf "gitdir:~/evhome/execvision"]
+  path = ~/evhome/ev/.gitconfig
 [core]
   editor = emacsclient
   excludesfile = ~/.gitignore_global
