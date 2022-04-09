@@ -4,7 +4,7 @@
 # Contain history, passwords, other sensitive crap that shouldn't be
 # tracked.
 
-# various history files for shells and apps.a
+# various history files for shells and apps.
 *history*
 # less history    
 .lesshst
@@ -14,6 +14,9 @@
 .wget-hsts
 # Magic cookies.
 .Xauthority
+
+.bash_sessions/
+.openvpn-connect.json
 
 # Local repo contains bunch of jars. Maven config can contain
 # passwords.
@@ -40,6 +43,7 @@
 .gnupg_pre_2.1/
 .iterm2/
 .iterm2_shell_integration.*
+.keras/
 .lpass/
 .macports/
 .npm/

@@ -69,9 +69,18 @@ sourceall() {
 python_user_dir() {
     local VERSION
     local USERDIR
+    local EXE
+    
     VERSION="${1:-}"
-    USERDIR=$("python${VERSION}" -m site --user-base)
-    echo "${USERDIR}"
+    EXE="python${VERSION}"
+
+    if [[ -x "$(which ${EXE})" ]]; then
+        USERDIR=$("${EXE}" -m site --user-base)
+        echo "${USERDIR}"
+    else
+        warn "$EXE is not executable"
+        echo ""
+    fi
 }
 
 
