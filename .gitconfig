@@ -4,8 +4,6 @@
   name = Mike Conley
   email = conleym@users.noreply.github.com
   signingkey = 40D22983
-[includeIf "gitdir:~/evhome/execvision/"]
-  path = ~/evhome/ev/.gitconfig
 [core]
   editor = emacsclient
   excludesfile = ~/.gitignore_global
@@ -50,3 +48,5 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[includeIf "gitdir:/Users/mike/evhome/execvision/"]
+    path = /Users/mike/evhome/ev/.gitconfig
