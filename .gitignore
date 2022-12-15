@@ -28,6 +28,9 @@
 # OpenSSL random seed.
 .rnd
 
+# SSH keys, private AND public.
+.ssh/id_*
+
 # .config/ contains lots of garbage, but also the occasional file that's
 # useful to track.
 .config/
@@ -37,10 +40,12 @@
 # Various cached or app-specific things that don't belong in vc.
 .ansible/
 .cache/
+.cargo/
 .docker/
 .dropbox/
 .gnupg/
 .gnupg_pre_2.1/
+.gradle/
 .iterm2/
 .iterm2_shell_integration.*
 .keras/
@@ -50,6 +55,7 @@
 .nvm/
 .nylas/
 .parallel/
+.rustup/
 .terraform.d/
 .vagrant.d/
 .viminfo
