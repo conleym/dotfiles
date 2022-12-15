@@ -51,15 +51,23 @@
 .keras/
 .lpass/
 .macports/
+.matplotlib/
 .npm/
 .nvm/
 .nylas/
 .parallel/
+# config file could be excluded.
 .rustup/
+# config file could be excluded.
+.siege/
+.swiftpm/
 .terraform.d/
+.theano/
+.tldr/
 .vagrant.d/
 .viminfo
 .virtualenvs/
+.vscode/
 
 # yarn last update timestamp, apparently
 .yarnrc
@@ -83,6 +91,7 @@ Movies/
 Music/
 Parallels/
 Pictures/
+Public/
 .Trash/
 
 src/
