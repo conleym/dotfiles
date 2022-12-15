@@ -1,3 +1,5 @@
+# Sourced for all interactive shells. This is the place for aliases and such.
+
 maybe_source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
 
 # Enable ls -G.

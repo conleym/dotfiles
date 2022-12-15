@@ -1,6 +1,9 @@
 test -r "${HOME}/.profile.d/base.sh" && source "${HOME}/.profile.d/base.sh"
 
+# Node version manager.
 maybe_source "${HOME}/.nvm/nvm.sh"
+# Rust.
+maybe_source "${HOME}/.cargo/env"
 
 # There's no python3.7 executable installed with the XCode command line tools. Use 3 instead.
 export PATH="${HOME}/bin:$(app_bindir Emacs):$(app_bindir Emacs)/bin:$(app_bindir VLC):$(python_user_dir 3)/bin:${PATH}"
