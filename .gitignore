@@ -62,7 +62,6 @@
 .siege/
 .swiftpm/
 .terraform.d/
-.theano/
 .tldr/
 .vagrant.d/
 .viminfo
