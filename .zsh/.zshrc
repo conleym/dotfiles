@@ -15,11 +15,7 @@ setopt append_history hist_verify hist_ignore_all_dups hist_reduce_blanks
 
 
 # cd_silent requires 5.8+
-# TODO note that this check only works up til 5.10 comes out, at which point it will
-# need adjustment.
-if [[ "${ZSH_VERSION}" > '5.8' || "${ZSH_VERSION}" == '5.8' ]]; then
-    setopt cd_silent
-fi
+setopt cd_silent
 setopt pushd_silent pushd_to_home
 
 setopt extended_glob glob_star_short glob_dots
