@@ -1,5 +1,21 @@
 # Sourced for all interactive shells. This is the place for aliases and such.
 
+test -r "${HOME}/.profile.d/base.sh" && source "${HOME}/.profile.d/base.sh"
+
+# Node version manager.
+maybe_source "${HOME}/.nvm/nvm.sh"
+# Rust.
+maybe_source "${HOME}/.cargo/env"
+
+# There's no python3.7 executable installed with the XCode command line tools. Use 3 instead.
+export PATH="${HOME}/bin:$(app_bindir Emacs):$(app_bindir Emacs)/bin:$(app_bindir VLC):$(python_user_dir 3)/bin:${PATH}"
+
+# Default is waaay too long.
+export PGCONNECT_TIMEOUT=10
+
+export LANG=en_US.UTF-8
+
+
 maybe_source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
 
 # Enable ls -G.
