@@ -14,6 +14,8 @@
 .wget-hsts
 # Magic cookies.
 .Xauthority
+# Config file can contain auth token.
+.ngrok2/
 
 .bash_sessions/
 .openvpn-connect.json
@@ -41,6 +43,8 @@
 .ansible/
 .cache/
 .cargo/
+# Printer settings.
+.cups/
 .docker/
 .dropbox/
 .gnupg/
