@@ -15,9 +15,6 @@ export PGCONNECT_TIMEOUT=10
 
 export LANG=en_US.UTF-8
 
-
-maybe_source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
-
 # Enable ls -G.
 export CLICOLOR=""
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
@@ -75,7 +72,7 @@ maybe_source ~/.nvm/bash_completion
 # oh-my-zsh
 DISABLE_UPDATE_PROMPT=true
 ZSH=~/.zsh/ohmyzsh
-plugins=(alias-finder ansible aws catimg colored-man-pages docker git macos macports npm pip virtualenv virtualenvwrapper yarn)
+plugins=(alias-finder ansible aws catimg colored-man-pages docker git macos macports npm pip virtualenv virtualenvwrapper)
 . $ZSH/oh-my-zsh.sh
 
 # aliased to 'ls -G' by oh-my-zsh, but handled by CLICOLOR env var.
@@ -83,3 +80,8 @@ plugins=(alias-finder ansible aws catimg colored-man-pages docker git macos macp
 alias ls='ls -F'
 
 globall "sourceall ~/.profile.d/addons/*.sh"
+
+
+# iterm2 shell integration and utilities.
+maybe_source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
+PATH="${PATH}:${ZDOTDIR}/.iterm2"
