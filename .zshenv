@@ -4,6 +4,6 @@
 #
 # Although it is claimed that this can be set in .zshrc, that seems not to be the case,
 # as ~/.zsh/.zsh_sessions will still appear with that setting in place when closing the terminal.
-SHELL_SESSIONS_DISABLE=1
+export SHELL_SESSIONS_DISABLE=1
 
-ZDOTDIR=~/.zsh
+export ZDOTDIR=~/.zsh
