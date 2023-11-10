@@ -51,3 +51,5 @@
     required = true
 [includeIf "gitdir:/Users/mike/evhome/execvision/"]
     path = /Users/mike/evhome/ev/.gitconfig
+[advice]
+	skippedCherryPicks = false
