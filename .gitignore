@@ -26,6 +26,7 @@
 
 # Contains credentials.
 .aws/
+.awsvault/
 
 # OpenSSL random seed.
 .rnd
