@@ -38,10 +38,6 @@ __pycache__/
 # source maps
 *.map
 
-
-# Vagrant
-.vagrant/
-
 ####################
 # Universal
 ####################
