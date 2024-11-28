@@ -55,6 +55,7 @@
 .npm/
 .nvm/
 .parallel/
+.parallels-desktop-vscode/
 # config file could be excluded.
 .rustup/
 # config file could be excluded.
