@@ -16,7 +16,7 @@
 .Xauthority
 # Config file can contain auth token.
 .ngrok2/
-
+# Bash sessions include command history and such.
 .bash_sessions/
 
 # Local repo contains bunch of jars. Maven config can contain
@@ -97,6 +97,15 @@ var/
 bin/
 # Specifically include things from bin that we want.
 !bin/gitprune
+
+# IntelliJ and friends.
+
+# New project directories (defaults).
+IdeaProjects/
+PycharmProjects/
+WebstormProjects/
+# Location for profile snapshots and such.
+IdeaSnapshots/
 
 # work
 evhome/
