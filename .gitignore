@@ -18,7 +18,6 @@
 .ngrok2/
 
 .bash_sessions/
-.openvpn-connect.json
 
 # Local repo contains bunch of jars. Maven config can contain
 # passwords.
@@ -26,7 +25,6 @@
 
 # Contains credentials.
 .aws/
-.awsvault/
 
 # OpenSSL random seed.
 .rnd
@@ -53,13 +51,9 @@
 .gradle/
 .iterm2/
 .iterm2_shell_integration.*
-.keras/
-.lpass/
 .macports/
-.matplotlib/
 .npm/
 .nvm/
-.nylas/
 .parallel/
 # config file could be excluded.
 .rustup/
@@ -68,7 +62,6 @@
 .swiftpm/
 .terraform.d/
 .tldr/
-.vagrant.d/
 .viminfo
 .virtualenvs/
 .vscode/
@@ -100,6 +93,9 @@ Public/
 
 src/
 var/
+bin/
+# Specifically include things from bin that we want.
+!bin/gitprune
 
 # work
 evhome/
