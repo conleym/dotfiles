@@ -1,0 +1,26 @@
+#!/usr/bin/env zsh
+
+# Remove dead git branches (those that are no longer in the remote repo).
+
+set -e -u -o pipefail
+
+git fetch -p
+
+# (f) splits words on newlines, I guess.
+# https://stackoverflow.com/questions/45878004/zsh-read-output-of-command-into-array-splitting-on-newline#comment92248762_45882316
+for branch in "${(f)"$(git branch -vv | grep ': gone]' | awk '{print $1}')"}"; do
+  # If we're on a branch that has been removed, we'll get '*'.
+  if [[ "*" == "${branch}" ]]; then
+    echo "Current branch has been removed from remote." >&2
+  fi
+  # If there are no branches that are gone, we still get an empty line.
+  if [[ -n "${branch}" && "*" != "${branch}" ]]; then
+    git branch -D "${branch}"
+  fi
+done
+
+
+# Local Variables:
+# mode: sh
+# sh-shell: zsh
+# End:
