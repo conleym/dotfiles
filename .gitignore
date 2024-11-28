@@ -82,7 +82,8 @@ Applications*/
 Desktop/
 Documents/
 Downloads/
-Dropbox/
+# Dropbox is a symlink.
+Dropbox
 Library/
 Movies/
 Music/
