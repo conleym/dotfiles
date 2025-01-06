@@ -1,53 +1,55 @@
 [color]
-  ui = true
+    ui = true
 [user]
-  name = Mike Conley
-  email = conleym@users.noreply.github.com
-  signingkey = 40D22983
+    name = Mike Conley
+    email = conleym@users.noreply.github.com
+    signingkey = 40D22983
 [core]
-  editor = emacsclient
-  excludesfile = ~/.gitignore_global
-  autocrlf = false
-  safecrlf = true
+    editor = emacsclient
+    excludesfile = ~/.gitignore_global
+    autocrlf = false
+    safecrlf = true
 [alias]
-  aa = add --all
-  br = branch
-  brd = branch --delete
-  ca = commit --amend
-  ch = commit --amend -C HEAD
-  cm = commit -m
-  co = checkout
-  cp = cherry-pick
-  cob = checkout -b
-  dc = diff --cached
-  fd = clean -fd
-  pf = push --force-with-lease
-  pt = fetch --prune origin +refs/tags/*:refs/tags/*
-  rsh = reset --hard
-  st = status -s
+    aa = add --all
+    br = branch
+    brd = branch --delete
+    ca = commit --amend
+    ch = commit --amend -C HEAD
+    cm = commit -m
+    co = checkout
+    cp = cherry-pick
+    cob = checkout -b
+    dc = diff --cached
+    fd = clean -fd
+    pf = push --force-with-lease
+    pt = fetch --prune origin +refs/tags/*:refs/tags/*
+    rsh = reset --hard
+    st = status -s
 [rerere]
-  enabled = true
+    enabled = true
 [merge]
-  defaultToUpstream = true
-  tool = meld
+    defaultToUpstream = true
+    tool = meld
 [commit]
-  gpgsign = true
+    gpgsign = true
 [push]
-  default = simple
-  autoSetupRemote = true
+    default = simple
+    autoSetupRemote = true
 [credential]
-  helper = osxkeychain
+    helper = osxkeychain
 [fetch]
-  prune = true
-  recurseSubmodules = true
+    prune = true
+    recurseSubmodules = true
 [diff]
-  submodule = log
+    submodule = log
 [rebase]
-  autostash = true
+    autostash = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
 [advice]
-    skippedCherryPicks = false
+	skippedCherryPicks = false
+[includeIf "gitdir:/Users/mike/alloyhome/alloy-monorepo/"]
+    path = /Users/mike/alloyhome/alloy/.gitconfig
