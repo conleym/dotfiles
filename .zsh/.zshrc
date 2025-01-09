@@ -52,8 +52,6 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 # Configure lesspipe. Note that less is already the default pager on macOS.
 export LESSOPEN='| /opt/local/bin/lesspipe.sh %s'
 
-eval $(thefuck --alias)
-
 alias config='git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
 #zstyle ':compinstall' filename "${HOME}/.zsh/.zshrc"
