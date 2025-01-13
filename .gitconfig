@@ -29,7 +29,6 @@
     enabled = true
 [merge]
     defaultToUpstream = true
-    tool = meld
 [commit]
     gpgsign = true
 [push]
