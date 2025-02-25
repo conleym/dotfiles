@@ -36,12 +36,13 @@
 # useful to track.
 .config/
 !.config/fontconfig/fonts.conf
-!.config/thefuck/settings.py
 
 # Various cached or app-specific things that don't belong in vc.
 .ansible/
 .cache/
 .cargo/
+# AWS CDK cache
+.cdk/cache/
 # Printer settings.
 .cups/
 .docker/
@@ -52,6 +53,8 @@
 .gradle/
 .iterm2/
 .iterm2_shell_integration.*
+# Java mission control. Nothing here but logs and plugins, it seems.
+.jmc/
 .macports/
 .npm/
 .nvm/
@@ -67,7 +70,6 @@
 .viminfo
 .virtualenvs/
 .vscode/
-
 # yarn last update timestamp, apparently
 .yarnrc
 
@@ -93,6 +95,9 @@ Parallels/
 Pictures/
 Public/
 .Trash/
+
+# Generic software that has no other home (e.g., jdbc drivers and such).
+software/
 
 src/
 var/
