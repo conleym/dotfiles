@@ -45,6 +45,7 @@
 # Printer settings.
 .cups/
 .docker/
+.doppler/
 .dropbox/
 .gnupg/
 .gnupg_pre_2.1/
@@ -109,4 +110,4 @@ WebstormProjects/
 IdeaSnapshots/
 
 # work
-evhome/
+work/
