@@ -79,10 +79,6 @@ alias ls='ls -F'
 
 globall "sourceall ~/.profile.d/addons/*.sh"
 
-# iterm2 shell integration and utilities.
-maybe_source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
-PATH="${PATH}:${ZDOTDIR}/.iterm2"
-
 # pnpm
 export PNPM_HOME="/Users/mike/Library/pnpm"
 case ":$PATH:" in
