@@ -14,8 +14,6 @@
 .wget-hsts
 # Magic cookies.
 .Xauthority
-# Config file can contain auth token.
-.ngrok2/
 # Bash sessions include command history and such.
 .bash_sessions/
 
