@@ -50,7 +50,6 @@
 .gnupg_pre_2.1/
 .gradle/
 .iterm2/
-.iterm2_shell_integration.*
 # Java mission control. Nothing here but logs and plugins, it seems.
 .jmc/
 .macports/
