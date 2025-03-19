@@ -27,9 +27,6 @@
 # OpenSSL random seed.
 .rnd
 
-# SSH keys, private AND public.
-.ssh/id_*
-
 # .config/ contains lots of garbage, but also the occasional file that's
 # useful to track.
 .config/
