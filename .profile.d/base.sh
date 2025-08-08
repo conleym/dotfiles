@@ -90,6 +90,8 @@ app_bindir() {
     echo "/Applications/${APP}.app/Contents/MacOS/"
 }
 
+
+
 # Local Variables:
 # mode: sh
 # sh-shell: zsh
