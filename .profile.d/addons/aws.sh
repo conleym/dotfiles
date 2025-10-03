@@ -30,10 +30,6 @@ use_aws() {
     _other_aws_common_stuff
 }
 
-aws_mine() {
-    use_aws personal
-}
-
 
 # http://stackoverflow.com/questions/33791069/quick-way-to-get-aws-account-number-from-the-cli-tools
 aws_account_id() {
