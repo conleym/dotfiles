@@ -50,7 +50,5 @@
     required = true
 [advice]
 	skippedCherryPicks = false
-[includeIf "gitdir:/Users/mike/work/alloyhome/alloy-monorepo/"]
-    path = /Users/mike/work/alloyhome/alloy/.gitconfig
 [includeIf "gitdir:/Users/mike/lmhome/work"]
     path = /Users/mike/work/lmhome/lm/.gitconfig
