@@ -17,6 +17,11 @@ EOF
 }
 
 
+# Export AWS variables associated with a given profile.
+# This can be useful for switching among multiple profiles, and also for
+# software that needs the various environment variables to be explicitly present
+# (e.g., if you need to get them substituted into a java properties file using a
+# framework that supports such things).
 use_aws() {
     export AWS_PROFILE="${1}"
     _other_aws_common_stuff
