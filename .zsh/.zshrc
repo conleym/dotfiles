@@ -77,8 +77,6 @@ plugins=(alias-finder ansible aws catimg colored-man-pages docker git macos macp
 # This alias messes with eshell, mainly because gnu ls and bsd ls disagree on the meaning of -G.
 alias ls='ls -F'
 
-globall "sourceall ~/.profile.d/addons/*.sh"
-
 # pnpm
 export PNPM_HOME="/Users/mike/Library/pnpm"
 case ":$PATH:" in
@@ -93,3 +91,6 @@ fpath=(/Users/mike/.docker/completions $fpath)
 
 # 1pw cli plugins
 maybe_source ~/.config/op/plugins.sh
+
+# shell profile.d
+globall "sourceall ~/.profile.d/addons/*.sh"
